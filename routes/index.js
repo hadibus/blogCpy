@@ -4,11 +4,11 @@ var crypto = require('crypto');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Blog' });
+  res.render('index', { title: 'Today I Learned' });
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Login - Blog' });
+  res.render('login', { title: 'Login - Today I Learned' });
 });
 
 router.post('/login', function(req, res, next) {

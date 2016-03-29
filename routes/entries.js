@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
         console.log(err);
       }
 
-      res.render('entries/index', { title: 'Blog', entries: data, name: name });
+      res.render('entries/index', { title: 'Today I Learned', entries: data, name: name });
     }
   );
 
@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
 
 /* CREATE entry form: GET /entries/new */
 router.get('/new', function(req, res, next) {
-  res.render('entries/new', {title: "Create new entry"});
+  res.render('entries/new', {title: "Create new TIL post"});
 });
 
 /*CREATE entry: POST /entries/ */
@@ -56,7 +56,7 @@ router.get('/:id/edit', function(req, res, next) {
 
       res.render('entries/update',
       {
-        title: 'Update an entry',
+        title: 'Update an TIL post',
         entry: data[0]
       });
     }
@@ -112,7 +112,7 @@ router.get('/:id', function(req, res, next) {
         console.log(err);
       }
 
-      res.render('entries/entry', {title: "a entry", entry: data[0]});
+      res.render('entries/entry', {title: "a TIL post", entry: data[0]});
     }
   );
 
